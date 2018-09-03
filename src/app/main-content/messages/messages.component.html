@@ -1,0 +1,16 @@
+<section class="messages-container">
+  <perfect-scrollbar class="ps-show-always ps-y-reach-end" style=" max-height: 400px;" [autoPropagation] [config]="config">
+    <div class="media chat-message col-lg-7 px-0 shadow rounded" *ngFor="let message of messages">
+      <!--<img alt="chatbots2-test" src="https://api.adorable.io/avatars/285/freddy@adorable.io.png" class="avatar">-->
+      <div class="media-body own-message " >
+        <div class="chat-item-title px-3 py-2 ">
+          <span class="chat-item-author">{{message.from || 'noName'}} </span>
+          <span class="float-right">{{message.timestamp}}</span>
+        </div>
+        <div class="chat-item-body px-3">
+          <p class="">{{message.content}}</p>
+        </div>
+      </div>
+    </div>
+  </perfect-scrollbar>
+</section>

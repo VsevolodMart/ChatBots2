@@ -1,0 +1,46 @@
+section {
+  background-color: white;
+  height: 100%;
+
+  .nav-link{
+    color: lightgray;;
+  }
+  .active{
+    color: gray
+  }
+  .media{
+    cursor: pointer;
+    &:hover{
+      background-color: lighten(#d7dfe7,15%);
+    }
+  }
+  .description{
+    font-size: 0.78rem;
+  }
+  .online {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: green;
+      transform: translate(50px, 50px)
+    }
+
+  }
+  .offline {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: red;
+      transform: translate(50px, 50px)
+    }
+
+  }
+}

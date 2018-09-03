@@ -1,0 +1,19 @@
+.main-container{
+
+  header.app-title{
+    background-color: #fff;
+    h2{
+      margin-top: 36px;
+    }
+  }
+  main{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #586670;
+    .chat-wrapper{
+      padding: 10px 0 ;
+      background-color: #d7dfe7;
+      border-radius: 4px;
+    }
+  }
+}

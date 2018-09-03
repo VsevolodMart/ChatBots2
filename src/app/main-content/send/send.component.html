@@ -1,0 +1,5 @@
+<form  class="form-inline send-form pl-2">
+  <label class="sr-only" for="send-input">Name</label>
+  <input [(ngModel)]="message" (keyup.enter)="sendMessage()" [ngModelOptions]="{standalone: true}" type="text" class="form-control mb-2 mr-sm-2" id="send-input" placeholder="type message">
+  <button (click)="sendMessage()" type="submit" class="btn btn-primary mb-2 send-submit">Submit</button>
+</form>

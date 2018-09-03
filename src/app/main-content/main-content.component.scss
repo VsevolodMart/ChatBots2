@@ -1,0 +1,17 @@
+section{
+  height: 655px;
+  .hide{
+    display: none;
+  }
+  .user-description{
+    background-color: #becbd9;
+    img{
+      height: 170px;
+      width: auto;
+    }
+    .card-block{
+      padding-top: 21px;
+      padding-left: 26px;
+    }
+  }
+}

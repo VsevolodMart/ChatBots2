@@ -1,0 +1,39 @@
+<section class="flex-row">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#" [class.active]="viewMode == 'tab1'" rel="tab1"
+         (click)="viewMode ='tab1'">Online</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" [class.active]="viewMode == 'tab2'" rel="tab2"
+         (click)="viewMode ='tab2'">All</a>
+    </li>
+  </ul>
+  <div class="tab-content" [ngSwitch]="viewMode">
+    <perfect-scrollbar class="ps-show-always ps-y-reach-end" style=" max-height: 600px;" [autoPropagation]
+                       [config]="config">
+      <div role="tabpanel" class="tab-pane active" *ngSwitchCase="'tab1'" id="tab1">
+        <div  *ngFor="let client of clientList">
+          <div class="media px-3 py-2 online" id="{{client.id}}" *ngIf="client.isConnected" (click)="onClick($event)">
+            <img class="mr-3" src="{{client.avatar}}" alt="image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-0">{{client.userName}}</h5>
+              <p class="mt-0 mb-0 description">{{client.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane active" *ngSwitchCase="'tab2'" id="tab2">
+        <div  *ngFor="let client of clientList">
+          <div class="media px-3 py-2 offline">
+            <img class="mr-3" src="{{client.avatar}}" alt="image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-0">{{client.userName}}</h5>
+              <p class="mt-0 mb-0 description">{{client.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </perfect-scrollbar>
+  </div>
+</section>

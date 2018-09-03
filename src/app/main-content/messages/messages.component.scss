@@ -1,0 +1,35 @@
+.chat-message {
+  & .own-message{
+    :host {
+      &.isActive {
+        background-color: red !important;
+      }
+    }
+  }
+
+  background-color: white;
+  border-radius: 0.25rem;
+  margin: 20px;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+    position: absolute;
+    top: 60px;
+    left: -10px;
+  }
+  .chat-item-title {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: #becbd9;
+  }
+  .chat-item-body {
+    & > p {
+      margin: 1rem auto;
+    }
+  }
+
+}
